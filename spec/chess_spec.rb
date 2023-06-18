@@ -195,6 +195,7 @@ describe Chess do
       it 'current position updates' do
         expect{ object.place }.to change{ object.current_position }.from([nil, nil]).to([0, 1])
         expect(object.placed).to eq true
+        expect(object.report).to eq '0, 1, NORTH, WHITE'
       end
     end
 
@@ -206,6 +207,7 @@ describe Chess do
       it 'current position will not update' do
         expect(object.current_position).to eq [nil, nil]
         expect(object.placed).to eq false
+        expect(object.report).to be_nil
       end
     end
   end

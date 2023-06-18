@@ -27,6 +27,7 @@ class Chess
   end
 
   def report
+    return unless @placed
     str = "#{@current_position[X]}, #{@current_position[Y]}, #{DIRECTION[@direction]}, #{@colour}"
     puts str
     str
